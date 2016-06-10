@@ -11,7 +11,31 @@
 		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 			<link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
-		<style>S
+		<!-- 대학교 소개 자바스크립트 설정 추가 -->
+		<script type = "text/javascript">
+			$(document).ready(function() {
+				// 처음 flag 값을 false로 추기화시킴
+				$("#pic_univ").data("flag", "false");
+				
+				// flag 값에 따라 스타일을 small과 large를 교환하며 적용
+				$("#pic_univ").click(function () {
+					var bflag = $("#pic_univ").data("flag");
+					if(bflag == "false") {
+						bflag = "true";
+						$("#pic_univ").removeClass("small");
+						$("#pic_univ").addClass("large");
+					} else {
+						bflag = "false";
+						$("#pic_univ").removeClass("large");
+						$("#pic_univ").addClass("small");
+					};
+					$("#pic_univ").data("flag", bflag);
+					
+				});
+			});
+		</script>
+		
+		<style>
 			.fotorama_caption {
 				text-align : center;
 			}
@@ -33,8 +57,33 @@
 				padding-top: 10px;
 			}
 		</style>
+		<style>
+			/* 대학교 소개용 */
+			#pic_univ {
+				float : left;
+				margin-right : 10px;
+				margin-botton : 10px;
+				-webkit-transition : width 2s;
+			}
+			.small {
+				width: 30%;
+			}
+			.large {
+				width: 100%;
+			}
+			.clear_both {
+				clear: both;
+			}
+			.bold_style {
+				font-weight: bold;
+				color: #950000;
+			}
+		</style>
+		
+		
 	</head>
 	<body>
+		
 		<div data-role = "page" id = "main">
 			<div data-role = "header" data-theme = "b">
 				<h2 id = "logo">가상대학교</h2>
@@ -43,24 +92,25 @@
 			<div data-role = "content">
 				<ul data-role = "listview" data-inset = "true">
 					<li><a href = "#campus_images">
-						<img src = "images/pic_i.png" alt = "" class = "ui-li-thumb" />
+						<img src = "pic/images/pic_i.png" alt = "" class = "ui-li-thumb" />
 						<h3 class = "title_Style">캠퍼스 이미지</h3>
 					</a></li>
-					<li><a href = "#">
-						<img src = "images/intro_i.png" alt = "" class = "ui-li-thumb"/>
+					<li><a href = "#intro">
+						<img src = "pic/images/intro_i.png" alt = "" class = "ui-li-thumb"/>
 						<h3 class = "title_style">대학교 소개</h3>
 					</a></li>
 					<li><a href = "#">
-						<img src = "images/movie_i.png" alt = "" class = "ui-li-thumb"/>
+						<img src = "pic/images/movie_i.png" alt = "" class = "ui-li-thumb"/>
 						<h3 class = "title_style">홍보동영상</h3>
 					</a></li>
 					<li><a href = "#">
-						<img src = "images/map_i.png" alt = "" class = "ui-li-thumb"/>
+						<img src = "pic/images/map_i.png" alt = "" class = "ui-li-thumb"/>
 						<h3 class = "title_style">캠퍼스 맵</h3>
 					</a></li>
 				</ul>
 			</div> <!-- Content -->
 		</div> <!-- page -->
+		
 		
 		<div data-role = "page" id = "campus_images" class = "gallery-page">
 			<div data-role = "header">
@@ -78,6 +128,27 @@
 					<a href = "pic/full/cb07.jpg"><img src = "pic/thumb/ca07.jpg" data-caption = "채플관"/></a>
 					<a href = "http://youtu.be/gc-SkeQ3Bng">최고의 가치 비디오</a>
 				</div>
+			</div>
+			<div data-role = "footer">
+				<h2>버추얼 대학교</h2>
+			</div>
+		</div>
+		<div data-role = "page" id = "intro">
+			<div data-role = "header" data-theme = "b">
+				<a href = "#main" data-icon = "home" data-direction = "reverse" class = "ui-btn-left">Home</a>
+				<h1>대학교 소개</h1>
+			</div>
+			<div data-role = "content" data-theme = "c">
+				<img class = "small" id = "pic_univ" src = "pic/images/univ.jpg" alt = "">
+				<h2>"<strong class = "bold_style">경운대학교</strong>"</h2>
+				<div class = "clear_both"></div>
+				
+				<p>경운대학교1</p>
+				<p>경운대학교2</p>
+				<p>경운대학교3</p>
+				<p>경운대학교4</p>
+				
+				
 			</div>
 			<div data-role = "footer">
 				<h2>버추얼 대학교</h2>

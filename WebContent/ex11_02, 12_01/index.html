@@ -2,15 +2,15 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>index</title>
+		<title>201502020 임창빈</title>
 		<meta name = "viewport" content = "width=device-width, initial-scale=1">
 		<link rel = "stylesheet" href = "https://code.jquery.com/ui/1.12.0-rc.2/themes/smoothness/jquery-ui.css"/>
 		<link rel = "stylesheet" href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
 		<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 		<script src="https://code.jquery.com/ui/1.12.0-rc.2/jquery-ui.min.js"></script>
 		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-			<link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+		<link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
 		<!-- 대학교 소개 자바스크립트 설정 추가 -->
 		<script type = "text/javascript">
 			$(document).ready(function() {
@@ -22,12 +22,12 @@
 					var bflag = $("#pic_univ").data("flag");
 					if(bflag == "false") {
 						bflag = "true";
-						$("#pic_univ").removeClass("small");
-						$("#pic_univ").addClass("large");
+						$("#pic_univ").removeClass("small");	// 스타일 시트에 있는  클래스 제거
+						$("#pic_univ").addClass("large");		// 스타일 시트에 클래스 추가
 					} else {
 						bflag = "false";
-						$("#pic_univ").removeClass("large");
-						$("#pic_univ").addClass("small");
+						$("#pic_univ").removeClass("large");	// 스타일 시트에 있는 클래스 제거
+						$("#pic_univ").addClass("small");		// 스타일 시트에 클래스 추가 
 					};
 					$("#pic_univ").data("flag", bflag);
 					
@@ -45,7 +45,7 @@
 				width: 176px;
 				height: 132px;
 				text-indent: -9999px;
-				background-image: url(images/CI_TITLE.png);
+				background-image: url(pic/images/CI_TITLE.png);
 				background-repeat: no-repeat;
 				margin-top: 0px;
 				margin-right: auto;
@@ -57,6 +57,7 @@
 				padding-top: 10px;
 			}
 		</style>
+		
 		<style>
 			/* 대학교 소개용 */
 			#pic_univ {
@@ -79,7 +80,20 @@
 				color: #950000;
 			}
 		</style>
-		
+				<style type = "text/css">
+			#video_canvas {
+				margin-top : 0px;
+				margin-right : auto;
+				margin-bottom :0px;
+				margin-left : auto;
+				width : 320px;
+				height : 240px;
+			}
+			.contents_style {
+				padding-right : 0px;
+				padding-left : 0px;
+			}
+		</style>
 		
 	</head>
 	<body>
@@ -99,11 +113,11 @@
 						<img src = "pic/images/intro_i.png" alt = "" class = "ui-li-thumb"/>
 						<h3 class = "title_style">대학교 소개</h3>
 					</a></li>
-					<li><a href = "#">
+					<li><a href = "video.html" rel = "external">
 						<img src = "pic/images/movie_i.png" alt = "" class = "ui-li-thumb"/>
 						<h3 class = "title_style">홍보동영상</h3>
 					</a></li>
-					<li><a href = "#">
+					<li><a href = "map.html" rel = "external">
 						<img src = "pic/images/map_i.png" alt = "" class = "ui-li-thumb"/>
 						<h3 class = "title_style">캠퍼스 맵</h3>
 					</a></li>
@@ -131,8 +145,11 @@
 			</div>
 			<div data-role = "footer">
 				<h2>버추얼 대학교</h2>
-			</div>
+			</div>	
 		</div>
+		
+		
+		
 		<div data-role = "page" id = "intro">
 			<div data-role = "header" data-theme = "b">
 				<a href = "#main" data-icon = "home" data-direction = "reverse" class = "ui-btn-left">Home</a>
@@ -141,12 +158,12 @@
 			<div data-role = "content" data-theme = "c">
 				<img class = "small" id = "pic_univ" src = "pic/images/univ.jpg" alt = "">
 				<h2>"<strong class = "bold_style">경운대학교</strong>"</h2>
-				<div class = "clear_both"></div>
+				<div class = "clear_both"></div> <!-- float 자르기 -->
 				
-				<p>경운대학교1</p>
-				<p>경운대학교2</p>
-				<p>경운대학교3</p>
-				<p>경운대학교4</p>
+				<p>경운대학교1경운대학교1경운대학교1경운대학교1경운대학교1경운대학교1경운대학교1경운대학교1경운대학교1경운대학교1경운대학교1경운대학교1경운대학교1경운대학교1</p>
+				<p>경운대학교2경운대학교2경운대학교2경운대학교2경운대학교2경운대학교2경운대학교2경운대학교2경운대학교2경운대학교2경운대학교2경운대학교2경운대학교2경운대학교2</p>
+				<p>경운대학교3경운대학교3경운대학교3경운대학교3경운대학교3경운대학교3경운대학교3경운대학교3경운대학교3경운대학교3경운대학교3경운대학교3경운대학교3경운대학교3</p>
+				<p>경운대학교4경운대학교4경운대학교4경운대학교4경운대학교4경운대학교4경운대학교4경운대학교4경운대학교4경운대학교4경운대학교4경운대학교4경운대학교4경운대학교4</p>
 				
 				
 			</div>
@@ -154,6 +171,7 @@
 				<h2>버추얼 대학교</h2>
 			</div>
 		</div>
-	
+		
+		
 	</body>
 </html>

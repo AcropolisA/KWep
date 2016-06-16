@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>video</title>
+		<meta name = "viewport" content = "width=device-width, initial-scale=1">
+		<link rel = "stylesheet" href = "https://code.jquery.com/ui/1.12.0-rc.2/themes/smoothness/jquery-ui.css"/>
+		<link rel = "stylesheet" href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+		<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.0-rc.2/jquery-ui.min.js"></script>
+		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		
+		<link href = "https://cdn.jsdelivr.net/videojs/5.9.2/video-js.css" rel="stylesheet">
+ 		<script src = "https://cdn.jsdelivr.net/videojs/5.9.2/video.js"></script>
+ 		
+ 
+		<style type = "text/css">
+			#video_canvas {
+				margin-top : 0px;
+				margin-right : auto;
+				margin-bottom :0px;
+				margin-left : auto;
+				text-align : center;
+				width : 640px;
+				height : 480px;
+				
+			}
+			.content_style {
+				padding-right : 0px;
+				padding-left : 0px;
+			}
+		</style>
+	</head>
+<body>
+		<div data-role = "page" id = "video_value" data-add-back-btn = "true">
+			<div data-role = "header" data-theme = "b">
+				<a href = "index.html" rel = "external" data-icon = "home" data-direction = "reverse">Home</a>
+				<h1>최고의 가치</h1>
+			</div>
+			<div data-role = "content" data-theme = "c" class = "content_style">
+				<div id = "video_canvas">
+					<div>
+						<video class = "video-js vjs-default-skin" width = "640" height = "480" controls preload = "auto" data-setup = "{}" >
+							<source src = "../movie/movie.mp4" type = 'video/mp4; codecs = "avc1.42E01E, mp4a.40.2"'/>
+							<source src = "../movie/movie.ogv" type = 'video/ogg; codecs = "theora, vorbis"'/>
+							<source src = "../movie/movie.webm" type = 'video/webm; codecs = "vp8, vorbis"'/>
+						</video>
+						<strong>Movie</strong>
+						<br/><br/>
+						
+					</div> <!-- video-js Box끝 -->
+					<div>
+						<video class = "video-js vjs-default-skin" width = "640" height = "480" controls preload = "auto" data-setup = "{}" >
+							<source src = "../movie/IU - My old story.mp4" type = 'video/mp4; codecs = "avc1.42E01E, mp4a.40.2"'/>
+						</video>
+						<strong>IU - My Old Story</strong>
+						<br/><br/>
+					</div>
+					<div>
+						<video class = "video-js vjs-default-skin" width = "640" height = "480" controls preload = "auto" data-setup = "{}" >
+							<source src = "../movie/Adele - Rolling In The Deep.mp4" type = 'video/mp4; codecs = "avc1.42E01E, mp4a.40.2"'/>
+						</video>
+						<strong>Adele - Rolling In The Deep</strong>
+						<br/>
+					</div>
+					<div>
+						<!-- 브라우저가 지원안할 경우 대비 -->
+						<p class = "vjs-no-video">
+							<strong>비디오 다운로드</strong>
+							<a href = "../movie/movie.mp4" target = "_blank">MP4</a>
+							<a href = "../movie/movie.ogv" target = "_blank">OGG</a>
+							<a href = "../movie/movie.webm" target = "_blank">WebM</a>
+							<br/>
+							<strong>비디오 다운로드</strong>
+							<a href = "../movie/IU - My old story.mp4" target = "_blank">MP4</a>
+							<br/>
+							<strong>비디오 다운로드</strong>
+							<a href = "../movie/Adele - Rolling In The Deep.mp4" target = "_blank">MP4</a>
+						</p>	
+					</div>
+				</div> <!-- video- canvas끝 -->
+				
+			</div>
+			<div data-role = "footer" data-theme = "b">
+				<h2>버추얼 대학교</h2>
+			</div>
+		</div>
+</body>
+</html>
